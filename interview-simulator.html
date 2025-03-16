@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Simulator - CareerBuilderAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                        accent: '#60A5FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-primary">CareerBuilderAI</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="job-recommendations.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Job Recommendations</a>
+                        <a href="cv-builder.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">CV Builder</a>
+                        <a href="skill-analysis.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Skill Analysis</a>
+                        <a href="interview-simulator.html" class="border-primary text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Interview Simulator</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Interview Simulator Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Interview Simulator</h1>
+            <p class="mt-2 text-gray-600">Practice interviews with our AI-powered simulator and get instant feedback</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Interview Configuration -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6 sticky top-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Interview Settings</h2>
+                    
+                    <!-- Job Role -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Job Role</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                            <option>Software Engineer</option>
+                            <option>Data Scientist</option>
+                            <option>Product Manager</option>
+                            <option>UX Designer</option>
+                            <option>Marketing Manager</option>
+                        </select>
+                    </div>
+
+                    <!-- Experience Level -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Experience Level</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                            <option>Entry Level</option>
+                            <option>Mid Level</option>
+                            <option>Senior Level</option>
+                        </select>
+                    </div>
+
+                    <!-- Interview Type -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Interview Type</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                            <option>Behavioral</option>
+                            <option>Technical</option>
+                            <option>Mixed</option>
+                        </select>
+                    </div>
+
+                    <!-- Duration -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Duration</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                            <option>15 minutes</option>
+                            <option>30 minutes</option>
+                            <option>45 minutes</option>
+                            <option>60 minutes</option>
+                        </select>
+                    </div>
+
+                    <!-- Start Button -->
+                    <button class="w-full bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        Start Interview
+                    </button>
+
+                    <!-- Tips -->
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <h3 class="text-sm font-medium text-primary mb-2">Interview Tips</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                Speak clearly and maintain a professional tone
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                Take time to think before answering
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                Use the STAR method for behavioral questions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interview Chat Interface -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-sm h-[600px] flex flex-col">
+                    <!-- Chat Header -->
+                    <div class="p-4 border-b">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-robot text-white"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-900">AI Interviewer</h3>
+                                <p class="text-sm text-gray-500">Software Engineer • Technical Interview</p>
+                            </div>
+                            <div class="ml-auto flex items-center space-x-4">
+                                <span class="text-sm text-gray-500">Duration: 28:45</span>
+                                <button class="text-red-500 hover:text-red-600">
+                                    <i class="fas fa-circle text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                        <!-- AI Message -->
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="ml-3 bg-gray-100 rounded-lg p-3 max-w-[80%]">
+                                <p class="text-gray-900">Hello! I'm your AI interviewer today. Let's start with a common question: Could you tell me about yourself and your background in software engineering?</p>
+                            </div>
+                        </div>
+
+                        <!-- User Message -->
+                        <div class="flex items-start justify-end">
+                            <div class="mr-3 bg-primary text-white rounded-lg p-3 max-w-[80%]">
+                                <p>Hi! I'm a software engineer with 2 years of experience specializing in full-stack web development. I've worked primarily with React and Node.js...</p>
+                            </div>
+                            <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-white text-sm"></i>
+                            </div>
+                        </div>
+
+                        <!-- AI Message -->
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="ml-3 bg-gray-100 rounded-lg p-3 max-w-[80%]">
+                                <p class="text-gray-900">Great introduction! Could you tell me about a challenging technical problem you've solved recently? What was the problem, and how did you approach it?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="p-4 border-t">
+                        <div class="flex items-center space-x-3">
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <i class="fas fa-microphone text-xl"></i>
+                            </button>
+                            <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Type your response...">
+                            <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Panel -->
+                <div class="mt-6 bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Real-time Feedback</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-900">Strong Introduction</h3>
+                                <p class="text-sm text-gray-600">Good job highlighting your relevant experience and technical skills.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-info text-yellow-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-900">Suggestion</h3>
+                                <p class="text-sm text-gray-600">Try to provide more specific examples of projects you've worked on.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+            <div class="flex justify-center space-x-6 md:order-2">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-center text-base text-gray-400">
+                    &copy; 2024 CareerBuilderAI. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
